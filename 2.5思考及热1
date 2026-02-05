@@ -1,0 +1,46 @@
+/*1."C语言缺乏对抽象的显示支持，例如类、对象和异常":
+  "抽象"(Abstraction)：隐藏复杂实现细节，只暴露必要的接口，提供简化模型。【和"透明"的关系？】
+  "透明"(Transparency)：隐藏实现过程，使机制不可见，使实现过程不可见，保证使用的流畅、符合"预期"。
+  先建立抽象，再追求透明。每一层都为上层提供抽象，同时努力让本层的实现细节{对上层透明}。
+  缺乏显示支持：C语言只提供最最最基础的工具，没有打包好的'类'或'对象'。
+  C语言中使用结构体+独立函数+指针来实现。所有结构体成员都是公开的，没有private/public。
+  "类"：将数据和对其进行操作的函数捆绑到一起
+
+2.程序的生命周期：
+程序的创建——>消亡（创建编译加载运行终止）
+*/
+/*Leetcode 热1：两数之和 
+给定一个整数数组 nums 和一个整数目标值 target，
+请你在该数组中找出 和为目标值 target  的那 两个 整数，
+并返回它们的数组下标。*/
+/*思路：
+1）总体：遍历
+2）过程：
+指针1：{0开始，结束条件：}
+指针2：{1开始}
+for循环，指针1、2数值加和，与target比较
+if判断：相同，输出指针1、2的下标值；不同，返回0
+*/
+/*First Edit*/
+int* twoSum(int* nums, int numsSize, int target, int* returnSize) {
+    int i=0;
+    for(i+1 < numsSize){
+        int add = nums[i] + nums[i+1];
+        if(add == target)
+            return [i,i+1];
+        else
+            return 0;    
+    };
+    return 0;
+}
+/*修改*/
+#include <stdio.h>
+#include <stdlib.h>
+int* twoSum(int* nums, int numsSize, int target, int* returnSize) {
+
+
+
+
+
+
+
