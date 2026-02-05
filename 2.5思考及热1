@@ -35,13 +35,3 @@ int* twoSum(int* nums, int numsSize, int target, int* returnSize) {
 };
 /*太久没写了，重新学!!!!!*/
 /*修改*/
-#include <stdio.h>
-#include <stdlib.h>
-int* twoSum(int* nums, int numsSize, int target, int* returnSize) {
-
-
-
-
-
-
-
