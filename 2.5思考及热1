@@ -9,6 +9,7 @@
 2.程序的生命周期：
 程序的创建——>消亡（创建编译加载运行终止）
 */
+
 /*Leetcode 热1：两数之和 
 给定一个整数数组 nums 和一个整数目标值 target，
 请你在该数组中找出 和为目标值 target  的那 两个 整数，
@@ -35,3 +36,24 @@ int* twoSum(int* nums, int numsSize, int target, int* returnSize) {
 };
 /*太久没写了，重新学!!!!!*/
 /*修改*/
+//最大的问题是，双指针比较好
+/*我的修改*/
+int* twoSum(int* nums, int numsSize, int target, int* returnSize) {
+    for(int i=0; i<numsSize; ++i){
+        for(int j=i+1; j<numsSize; ++j){
+        int add = nums[i] + nums[j];
+        if(add == target){
+            /*这个地方由于要输出数组的形式，需要用malloc开辟新空间存储,
+malloc格式:(分配10个int类型的内存空间) int *arr = (int *)malloc(10 * sizeof(int));*/
+            int* ret = (int *)malloc(2 * sizeof(int));
+            ret[0] = i;
+            ret[1] = j;
+            *returnSize = 2;
+            return ret;
+        }
+      }
+    }
+    *returnSize = 0;
+    return NULL;
+}
+/*补充：哈希表法*/
